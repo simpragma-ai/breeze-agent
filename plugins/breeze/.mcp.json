@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "breeze": {
+      "type": "http",
+      "url": "https://studio.simpragma.com/mcp"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "breeze",
+  "description": "Drive Breeze from your AI assistant: build AI phone agents from a description, test them on your own phone, run campaigns within the calling rules, and read back results, transcripts and spend.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Simpragma"
+  },
+  "homepage": "https://studio.simpragma.com",
+  "license": "UNLICENSED",
+  "keywords": ["voice", "telephony", "ai-agents", "campaigns"],
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json"
+}

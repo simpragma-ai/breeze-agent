@@ -1,0 +1,28 @@
+{
+  "name": "simpragma",
+  "owner": {
+    "name": "Simpragma",
+    "url": "https://simpragma.com"
+  },
+  "description": "Build, test and run Breeze AI phone agents from your own AI assistant.",
+  "version": "0.2.0",
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "breeze",
+      "displayName": "Breeze",
+      "source": "./plugins/breeze",
+      "description": "The Breeze connection plus how to use it well: build an agent from a description, hear it on your own phone, run campaigns within the calling rules, and read the results and your spend.",
+      "version": "0.2.0",
+      "author": {
+        "name": "Simpragma"
+      },
+      "homepage": "https://studio.simpragma.com",
+      "license": "UNLICENSED",
+      "keywords": ["voice", "telephony", "ai-agents", "campaigns", "collections", "reminders"],
+      "category": "productivity"
+    }
+  ]
+}
