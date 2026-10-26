@@ -59,7 +59,6 @@ create_agent({
     {name: "due_date", source: "call", must: true, description: "Date the rent is due", example: "1 November"}
   ],
   greeting: "Hello, this is Sam calling from {company_name}. Am I speaking with {tenant_name}?",
-  outcomes: {positive: ["WILL_PAY_ON_TIME", "ALREADY_PAID"], callback: ["CALLBACK_REQUESTED", "PROPERTY_ISSUE"], failure: ["WONT_PAY"]},
   company_name: "Oakfield Lettings"
 })
 ```
@@ -92,9 +91,10 @@ those are spoken to everyone.
 One short sentence with `{fact}` placeholders. A sentence whose fact is missing is dropped, so a
 blank name never produces "…am I speaking with?". Omit it for a sensible default.
 
-### outcomes — required
-Codes for how each call ended, grouped positive / callback / failure, designed for **this**
-goal. WRONG_PERSON, NO_RESPONSE and OTHER are added for you. See **breeze-outcomes**.
+### outcomes — leave them out
+Breeze works out how calls are scored from the role, goal and steps, and adds the standard
+outcomes every call can end in. Pass `outcomes` only if the person named specific ones. To see or
+change them afterwards: `get_agent`, `update_agent({outcomes})` — see **breeze-outcomes**.
 
 ### languages
 UK and US workspaces default to English; India to all six (en, hi, ta, te, kn, ml). One agent
@@ -116,10 +116,12 @@ switches when the person asks. Change with `set_agent_languages`; check with
 | Change | Tool |
 |---|---|
 | Name, or its whole prompt | `update_agent({campaign_id, name?, custom_system_prompt?})` — `null` prompt goes back to the template's script |
+| How calls are scored | `update_agent({campaign_id, outcomes})` — a list, `"derive"` or `"accept_suggestion"` (**breeze-outcomes**) |
 | Company name, opening hours, other agent facts; must-have on/off | `set_agent_facts` |
 | Languages | `set_agent_languages` |
 
-A changed prompt re-checks the call type and re-runs the go-live check before the next launch.
+A changed prompt re-checks the call type, works the outcomes out again (keeping codes whose meaning
+still holds) and re-runs the go-live check before the next launch.
 When you write a full `custom_system_prompt`, keep the same discipline: no per-person values in
 it (they arrive in a silent "[Context — …]" note on each turn), one ask per step, a clear goal
 and a clear close. Breeze's shared rules are still added after it and win if they conflict.
