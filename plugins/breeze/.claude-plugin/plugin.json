@@ -6,7 +6,7 @@
     "name": "Simpragma"
   },
   "homepage": "https://studio.simpragma.com",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "keywords": ["voice", "telephony", "ai-agents", "campaigns"],
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json"
 }

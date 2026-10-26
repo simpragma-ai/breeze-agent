@@ -106,3 +106,8 @@ docs/getting-started.md            the guide for business users
 ## Support
 
 Your Simpragma contact.
+
+## Licence
+
+MIT — see [LICENSE](LICENSE). The plugin and skills are free to use and adapt; using Breeze
+itself needs a Breeze account and is covered by its own terms.
