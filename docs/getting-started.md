@@ -89,7 +89,7 @@ and test numbers. Ask your assistant, in your own words:
   credit in Breeze Studio → **Billing**.
 - **The assistant only gets the permissions you ticked**, only for the workspace you picked.
 
-See [Calling rules and compliance](https://voiceai.simpragma.com/docs/calling-rules) for the hours
+See [Calling rules and compliance](https://breeze.simpragma.com/docs/calling-rules) for the hours
 by country.
 
 ## 5. Manage access
