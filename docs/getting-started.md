@@ -16,7 +16,7 @@ account and approve (step 2).
 | Assistant | How |
 |---|---|
 | **Claude Code** | `/plugin marketplace add simpragma-ai/breeze-agent`, then `/plugin install breeze@simpragma`. Restart, run `/mcp`, choose **breeze** → *Authenticate*. The plugin also teaches Claude how to design, test and run agents well. |
-| **Claude** (web and desktop) | Settings → **Connectors** → *Add custom connector* → name `Breeze`, URL above → *Connect*. On Team and Enterprise plans an owner can add it once for the whole organisation. |
+| **Claude** (desktop and claude.ai) | Paid plans: **Customize** → **Plugins** → *Add* → *Add marketplace* → *Add from a repository* → `simpragma-ai/breeze-agent`, then **Discover** → **Breeze** → *Add*. Connection: **Customize** → **Connectors** → *+ Add* → *Add custom connector* → name `Breeze`, URL above, OAuth client *Register automatically* → *Add*; in each chat turn it on under **+** → **Connectors**. On Team and Enterprise plans an owner adds it under Organization settings → Connectors. Step by step: [Use Breeze with Claude](https://breeze.simpragma.com/docs/claude). |
 | **ChatGPT** (Plus, Pro, Business, Enterprise, Edu) | Settings → Security and login → turn on **Developer mode**; then add a connector with the URL above and choose OAuth. |
 | **Microsoft Copilot Studio** | In your agent: *Tools* → *Add a tool* → **Model Context Protocol** → server URL above, authentication **OAuth 2.0 → Dynamic discovery**. |
 | **GitHub Copilot in VS Code** | Command palette → *MCP: Add Server* → **HTTP** → URL above, name `breeze`. Or in `.vscode/mcp.json`: `{"servers": {"breeze": {"type": "http", "url": "https://studio.simpragma.com/mcp"}}}` |
